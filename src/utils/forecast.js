@@ -12,7 +12,9 @@ const forecast = (latitude, longitude, callback) => {
         }
         else {
             const data = body.currently
-            callback(undefined, body.daily.data[0].summary + ' It is currently ' + data.temperature + ' degrees out. There is a ' + data.precipProbability + '% chance of rain.')
+            console.log(data)
+            callback(undefined, body.daily.data[0].summary + ' It is currently ' + data.temperature + ' degrees out. There is a ' + data.precipProbability + '% chance of rain.'
+                                + ' The nearest storm is ' + data.nearestStormDistance + ' kilometers away.')
         }
     })
 }

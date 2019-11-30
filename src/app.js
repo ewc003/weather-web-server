@@ -71,18 +71,18 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'you must include search term'
-        })
-    }
+// app.get('/products', (req, res) => {
+//     if (!req.query.search) {
+//         return res.send({
+//             error: 'you must include search term'
+//         })
+//     }
 
-    console.log(req.query.search)
-    res.send({
-        product: []
-    })
-})
+//     console.log(req.query.search)
+//     res.send({
+//         product: []
+//     })
+// })
 
 app.get('/help/*', (req, res) => {
     res.render('404', {
